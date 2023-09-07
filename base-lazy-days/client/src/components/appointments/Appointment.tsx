@@ -27,7 +27,7 @@ export function Appointment({
   appointmentData,
 }: AppointmentProps): ReactElement {
   const { user } = useUser();
-  const reserveAppointment = useReserveAppointment();
+  const reserveAppointment = useReserveAppointment(); // mutate 함수
   const [textColor, bgColor] = getAppointmentColor(appointmentData, user?.id);
 
   const clickable = isClickable(user, appointmentData);
